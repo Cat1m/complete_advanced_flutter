@@ -1,3 +1,4 @@
+import 'package:complete_advanced_flutter/app/extensions.dart';
 import 'package:complete_advanced_flutter/presentation/resources/color_manager.dart';
 import 'package:complete_advanced_flutter/presentation/resources/font_manager.dart';
 import 'package:complete_advanced_flutter/presentation/resources/styles_manager.dart';
@@ -14,7 +15,7 @@ ThemeData getApplicationTheme() {
       // ripple color
       splashColor: ColorManager.primaryOpacity70,
       // will be used incase of disabled button for example
-      accentColor: ColorManager.grey,
+      colorScheme: ColorScheme.fromSwatch(accentColor: ColorManager.grey),
       // card view theme
       cardTheme: CardTheme(
           color: ColorManager.white,
@@ -39,12 +40,12 @@ ThemeData getApplicationTheme() {
       elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
               textStyle: getRegularStyle(color: ColorManager.white),
-              primary: ColorManager.primary,
+              backgroundColor: ColorManager.primary,
               shape: RoundedRectangleBorder(
                   borderRadius: BorderRadius.circular(AppSize.s12)))),
 
       // Text theme
-      textTheme: TextTheme(
+      textTheme: TextThemeExtension.createTextTheme(
           headline1: getSemiBoldStyle(
               color: ColorManager.darkGrey, fontSize: FontSize.s16),
           headline2: getRegularStyle(

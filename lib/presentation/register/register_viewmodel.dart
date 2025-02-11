@@ -9,7 +9,7 @@ import 'package:complete_advanced_flutter/presentation/common/state_renderer/sta
 import 'package:complete_advanced_flutter/presentation/common/state_renderer/state_renderer.dart';
 
 class RegisterViewModel extends BaseViewModel
-    with RegisterViewModelInput, RegisterViewModelOutput {
+    implements RegisterViewModelInput, RegisterViewModelOutput {
   StreamController _userNameStreamController =
       StreamController<String>.broadcast();
   StreamController _mobileNumberStreamController =

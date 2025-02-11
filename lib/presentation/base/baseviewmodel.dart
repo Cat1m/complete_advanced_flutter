@@ -4,9 +4,8 @@ import 'package:complete_advanced_flutter/presentation/common/state_renderer/sta
 import 'package:rxdart/rxdart.dart';
 
 abstract class BaseViewModel extends BaseViewModelInputs
-    with BaseViewModelOutputs {
-  StreamController _inputStateStreamController =
-  BehaviorSubject<FlowState>();
+    implements BaseViewModelOutputs {
+  StreamController _inputStateStreamController = BehaviorSubject<FlowState>();
 
   @override
   Sink get inputState => _inputStateStreamController.sink;

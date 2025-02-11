@@ -1,5 +1,7 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: type=lint
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target, unnecessary_question_mark
 
 part of 'freezed_data_classes.dart';
 
@@ -10,29 +12,16 @@ part of 'freezed_data_classes.dart';
 T _$identity<T>(T value) => value;
 
 final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
-/// @nodoc
-class _$LoginObjectTearOff {
-  const _$LoginObjectTearOff();
-
-  _LoginObject call(String userName, String password) {
-    return _LoginObject(
-      userName,
-      password,
-    );
-  }
-}
-
-/// @nodoc
-const $LoginObject = _$LoginObjectTearOff();
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
 
 /// @nodoc
 mixin _$LoginObject {
   String get userName => throw _privateConstructorUsedError;
   String get password => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $LoginObjectCopyWith<LoginObject> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -41,67 +30,75 @@ mixin _$LoginObject {
 abstract class $LoginObjectCopyWith<$Res> {
   factory $LoginObjectCopyWith(
           LoginObject value, $Res Function(LoginObject) then) =
-      _$LoginObjectCopyWithImpl<$Res>;
+      _$LoginObjectCopyWithImpl<$Res, LoginObject>;
+  @useResult
   $Res call({String userName, String password});
 }
 
 /// @nodoc
-class _$LoginObjectCopyWithImpl<$Res> implements $LoginObjectCopyWith<$Res> {
+class _$LoginObjectCopyWithImpl<$Res, $Val extends LoginObject>
+    implements $LoginObjectCopyWith<$Res> {
   _$LoginObjectCopyWithImpl(this._value, this._then);
 
-  final LoginObject _value;
   // ignore: unused_field
-  final $Res Function(LoginObject) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of LoginObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userName = freezed,
-    Object? password = freezed,
+    Object? userName = null,
+    Object? password = null,
   }) {
     return _then(_value.copyWith(
-      userName: userName == freezed
+      userName: null == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$LoginObjectCopyWith<$Res>
+abstract class _$$LoginObjectImplCopyWith<$Res>
     implements $LoginObjectCopyWith<$Res> {
-  factory _$LoginObjectCopyWith(
-          _LoginObject value, $Res Function(_LoginObject) then) =
-      __$LoginObjectCopyWithImpl<$Res>;
+  factory _$$LoginObjectImplCopyWith(
+          _$LoginObjectImpl value, $Res Function(_$LoginObjectImpl) then) =
+      __$$LoginObjectImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call({String userName, String password});
 }
 
 /// @nodoc
-class __$LoginObjectCopyWithImpl<$Res> extends _$LoginObjectCopyWithImpl<$Res>
-    implements _$LoginObjectCopyWith<$Res> {
-  __$LoginObjectCopyWithImpl(
-      _LoginObject _value, $Res Function(_LoginObject) _then)
-      : super(_value, (v) => _then(v as _LoginObject));
+class __$$LoginObjectImplCopyWithImpl<$Res>
+    extends _$LoginObjectCopyWithImpl<$Res, _$LoginObjectImpl>
+    implements _$$LoginObjectImplCopyWith<$Res> {
+  __$$LoginObjectImplCopyWithImpl(
+      _$LoginObjectImpl _value, $Res Function(_$LoginObjectImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _LoginObject get _value => super._value as _LoginObject;
-
+  /// Create a copy of LoginObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? userName = freezed,
-    Object? password = freezed,
+    Object? userName = null,
+    Object? password = null,
   }) {
-    return _then(_LoginObject(
-      userName == freezed
+    return _then(_$LoginObjectImpl(
+      null == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
               as String,
-      password == freezed
+      null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
@@ -111,8 +108,8 @@ class __$LoginObjectCopyWithImpl<$Res> extends _$LoginObjectCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_LoginObject implements _LoginObject {
-  _$_LoginObject(this.userName, this.password);
+class _$LoginObjectImpl implements _LoginObject {
+  _$LoginObjectImpl(this.userName, this.password);
 
   @override
   final String userName;
@@ -125,61 +122,44 @@ class _$_LoginObject implements _LoginObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _LoginObject &&
+        (other.runtimeType == runtimeType &&
+            other is _$LoginObjectImpl &&
             (identical(other.userName, userName) ||
-                const DeepCollectionEquality()
-                    .equals(other.userName, userName)) &&
+                other.userName == userName) &&
             (identical(other.password, password) ||
-                const DeepCollectionEquality()
-                    .equals(other.password, password)));
+                other.password == password));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(userName) ^
-      const DeepCollectionEquality().hash(password);
+  int get hashCode => Object.hash(runtimeType, userName, password);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of LoginObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$LoginObjectCopyWith<_LoginObject> get copyWith =>
-      __$LoginObjectCopyWithImpl<_LoginObject>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$LoginObjectImplCopyWith<_$LoginObjectImpl> get copyWith =>
+      __$$LoginObjectImplCopyWithImpl<_$LoginObjectImpl>(this, _$identity);
 }
 
 abstract class _LoginObject implements LoginObject {
-  factory _LoginObject(String userName, String password) = _$_LoginObject;
+  factory _LoginObject(final String userName, final String password) =
+      _$LoginObjectImpl;
 
   @override
-  String get userName => throw _privateConstructorUsedError;
+  String get userName;
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
+
+  /// Create a copy of LoginObject
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$LoginObjectCopyWith<_LoginObject> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$LoginObjectImplCopyWith<_$LoginObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }
-
-/// @nodoc
-class _$RegisterObjectTearOff {
-  const _$RegisterObjectTearOff();
-
-  _RegisterObject call(String countryMobileCode, String mobileNumber,
-      String userName, String email, String password, String profilePicture) {
-    return _RegisterObject(
-      countryMobileCode,
-      mobileNumber,
-      userName,
-      email,
-      password,
-      profilePicture,
-    );
-  }
-}
-
-/// @nodoc
-const $RegisterObject = _$RegisterObjectTearOff();
 
 /// @nodoc
 mixin _$RegisterObject {
@@ -190,7 +170,9 @@ mixin _$RegisterObject {
   String get password => throw _privateConstructorUsedError;
   String get profilePicture => throw _privateConstructorUsedError;
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RegisterObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   $RegisterObjectCopyWith<RegisterObject> get copyWith =>
       throw _privateConstructorUsedError;
 }
@@ -199,7 +181,8 @@ mixin _$RegisterObject {
 abstract class $RegisterObjectCopyWith<$Res> {
   factory $RegisterObjectCopyWith(
           RegisterObject value, $Res Function(RegisterObject) then) =
-      _$RegisterObjectCopyWithImpl<$Res>;
+      _$RegisterObjectCopyWithImpl<$Res, RegisterObject>;
+  @useResult
   $Res call(
       {String countryMobileCode,
       String mobileNumber,
@@ -210,59 +193,64 @@ abstract class $RegisterObjectCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$RegisterObjectCopyWithImpl<$Res>
+class _$RegisterObjectCopyWithImpl<$Res, $Val extends RegisterObject>
     implements $RegisterObjectCopyWith<$Res> {
   _$RegisterObjectCopyWithImpl(this._value, this._then);
 
-  final RegisterObject _value;
   // ignore: unused_field
-  final $Res Function(RegisterObject) _then;
+  final $Val _value;
+  // ignore: unused_field
+  final $Res Function($Val) _then;
 
+  /// Create a copy of RegisterObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? countryMobileCode = freezed,
-    Object? mobileNumber = freezed,
-    Object? userName = freezed,
-    Object? email = freezed,
-    Object? password = freezed,
-    Object? profilePicture = freezed,
+    Object? countryMobileCode = null,
+    Object? mobileNumber = null,
+    Object? userName = null,
+    Object? email = null,
+    Object? password = null,
+    Object? profilePicture = null,
   }) {
     return _then(_value.copyWith(
-      countryMobileCode: countryMobileCode == freezed
+      countryMobileCode: null == countryMobileCode
           ? _value.countryMobileCode
           : countryMobileCode // ignore: cast_nullable_to_non_nullable
               as String,
-      mobileNumber: mobileNumber == freezed
+      mobileNumber: null == mobileNumber
           ? _value.mobileNumber
           : mobileNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      userName: userName == freezed
+      userName: null == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
               as String,
-      email: email == freezed
+      email: null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      password: password == freezed
+      password: null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      profilePicture: profilePicture == freezed
+      profilePicture: null == profilePicture
           ? _value.profilePicture
           : profilePicture // ignore: cast_nullable_to_non_nullable
               as String,
-    ));
+    ) as $Val);
   }
 }
 
 /// @nodoc
-abstract class _$RegisterObjectCopyWith<$Res>
+abstract class _$$RegisterObjectImplCopyWith<$Res>
     implements $RegisterObjectCopyWith<$Res> {
-  factory _$RegisterObjectCopyWith(
-          _RegisterObject value, $Res Function(_RegisterObject) then) =
-      __$RegisterObjectCopyWithImpl<$Res>;
+  factory _$$RegisterObjectImplCopyWith(_$RegisterObjectImpl value,
+          $Res Function(_$RegisterObjectImpl) then) =
+      __$$RegisterObjectImplCopyWithImpl<$Res>;
   @override
+  @useResult
   $Res call(
       {String countryMobileCode,
       String mobileNumber,
@@ -273,47 +261,47 @@ abstract class _$RegisterObjectCopyWith<$Res>
 }
 
 /// @nodoc
-class __$RegisterObjectCopyWithImpl<$Res>
-    extends _$RegisterObjectCopyWithImpl<$Res>
-    implements _$RegisterObjectCopyWith<$Res> {
-  __$RegisterObjectCopyWithImpl(
-      _RegisterObject _value, $Res Function(_RegisterObject) _then)
-      : super(_value, (v) => _then(v as _RegisterObject));
+class __$$RegisterObjectImplCopyWithImpl<$Res>
+    extends _$RegisterObjectCopyWithImpl<$Res, _$RegisterObjectImpl>
+    implements _$$RegisterObjectImplCopyWith<$Res> {
+  __$$RegisterObjectImplCopyWithImpl(
+      _$RegisterObjectImpl _value, $Res Function(_$RegisterObjectImpl) _then)
+      : super(_value, _then);
 
-  @override
-  _RegisterObject get _value => super._value as _RegisterObject;
-
+  /// Create a copy of RegisterObject
+  /// with the given fields replaced by the non-null parameter values.
+  @pragma('vm:prefer-inline')
   @override
   $Res call({
-    Object? countryMobileCode = freezed,
-    Object? mobileNumber = freezed,
-    Object? userName = freezed,
-    Object? email = freezed,
-    Object? password = freezed,
-    Object? profilePicture = freezed,
+    Object? countryMobileCode = null,
+    Object? mobileNumber = null,
+    Object? userName = null,
+    Object? email = null,
+    Object? password = null,
+    Object? profilePicture = null,
   }) {
-    return _then(_RegisterObject(
-      countryMobileCode == freezed
+    return _then(_$RegisterObjectImpl(
+      null == countryMobileCode
           ? _value.countryMobileCode
           : countryMobileCode // ignore: cast_nullable_to_non_nullable
               as String,
-      mobileNumber == freezed
+      null == mobileNumber
           ? _value.mobileNumber
           : mobileNumber // ignore: cast_nullable_to_non_nullable
               as String,
-      userName == freezed
+      null == userName
           ? _value.userName
           : userName // ignore: cast_nullable_to_non_nullable
               as String,
-      email == freezed
+      null == email
           ? _value.email
           : email // ignore: cast_nullable_to_non_nullable
               as String,
-      password == freezed
+      null == password
           ? _value.password
           : password // ignore: cast_nullable_to_non_nullable
               as String,
-      profilePicture == freezed
+      null == profilePicture
           ? _value.profilePicture
           : profilePicture // ignore: cast_nullable_to_non_nullable
               as String,
@@ -323,8 +311,8 @@ class __$RegisterObjectCopyWithImpl<$Res>
 
 /// @nodoc
 
-class _$_RegisterObject implements _RegisterObject {
-  _$_RegisterObject(this.countryMobileCode, this.mobileNumber, this.userName,
+class _$RegisterObjectImpl implements _RegisterObject {
+  _$RegisterObjectImpl(this.countryMobileCode, this.mobileNumber, this.userName,
       this.email, this.password, this.profilePicture);
 
   @override
@@ -346,67 +334,63 @@ class _$_RegisterObject implements _RegisterObject {
   }
 
   @override
-  bool operator ==(dynamic other) {
+  bool operator ==(Object other) {
     return identical(this, other) ||
-        (other is _RegisterObject &&
+        (other.runtimeType == runtimeType &&
+            other is _$RegisterObjectImpl &&
             (identical(other.countryMobileCode, countryMobileCode) ||
-                const DeepCollectionEquality()
-                    .equals(other.countryMobileCode, countryMobileCode)) &&
+                other.countryMobileCode == countryMobileCode) &&
             (identical(other.mobileNumber, mobileNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.mobileNumber, mobileNumber)) &&
+                other.mobileNumber == mobileNumber) &&
             (identical(other.userName, userName) ||
-                const DeepCollectionEquality()
-                    .equals(other.userName, userName)) &&
-            (identical(other.email, email) ||
-                const DeepCollectionEquality().equals(other.email, email)) &&
+                other.userName == userName) &&
+            (identical(other.email, email) || other.email == email) &&
             (identical(other.password, password) ||
-                const DeepCollectionEquality()
-                    .equals(other.password, password)) &&
+                other.password == password) &&
             (identical(other.profilePicture, profilePicture) ||
-                const DeepCollectionEquality()
-                    .equals(other.profilePicture, profilePicture)));
+                other.profilePicture == profilePicture));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(countryMobileCode) ^
-      const DeepCollectionEquality().hash(mobileNumber) ^
-      const DeepCollectionEquality().hash(userName) ^
-      const DeepCollectionEquality().hash(email) ^
-      const DeepCollectionEquality().hash(password) ^
-      const DeepCollectionEquality().hash(profilePicture);
+  int get hashCode => Object.hash(runtimeType, countryMobileCode, mobileNumber,
+      userName, email, password, profilePicture);
 
-  @JsonKey(ignore: true)
+  /// Create a copy of RegisterObject
+  /// with the given fields replaced by the non-null parameter values.
+  @JsonKey(includeFromJson: false, includeToJson: false)
   @override
-  _$RegisterObjectCopyWith<_RegisterObject> get copyWith =>
-      __$RegisterObjectCopyWithImpl<_RegisterObject>(this, _$identity);
+  @pragma('vm:prefer-inline')
+  _$$RegisterObjectImplCopyWith<_$RegisterObjectImpl> get copyWith =>
+      __$$RegisterObjectImplCopyWithImpl<_$RegisterObjectImpl>(
+          this, _$identity);
 }
 
 abstract class _RegisterObject implements RegisterObject {
   factory _RegisterObject(
-      String countryMobileCode,
-      String mobileNumber,
-      String userName,
-      String email,
-      String password,
-      String profilePicture) = _$_RegisterObject;
+      final String countryMobileCode,
+      final String mobileNumber,
+      final String userName,
+      final String email,
+      final String password,
+      final String profilePicture) = _$RegisterObjectImpl;
 
   @override
-  String get countryMobileCode => throw _privateConstructorUsedError;
+  String get countryMobileCode;
   @override
-  String get mobileNumber => throw _privateConstructorUsedError;
+  String get mobileNumber;
   @override
-  String get userName => throw _privateConstructorUsedError;
+  String get userName;
   @override
-  String get email => throw _privateConstructorUsedError;
+  String get email;
   @override
-  String get password => throw _privateConstructorUsedError;
+  String get password;
   @override
-  String get profilePicture => throw _privateConstructorUsedError;
+  String get profilePicture;
+
+  /// Create a copy of RegisterObject
+  /// with the given fields replaced by the non-null parameter values.
   @override
-  @JsonKey(ignore: true)
-  _$RegisterObjectCopyWith<_RegisterObject> get copyWith =>
+  @JsonKey(includeFromJson: false, includeToJson: false)
+  _$$RegisterObjectImplCopyWith<_$RegisterObjectImpl> get copyWith =>
       throw _privateConstructorUsedError;
 }

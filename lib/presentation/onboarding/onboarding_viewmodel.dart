@@ -7,7 +7,7 @@ import 'package:complete_advanced_flutter/presentation/resources/strings_manager
 import 'package:easy_localization/easy_localization.dart';
 
 class OnBoardingViewModel extends BaseViewModel
-    with OnBoardingViewModelInputs, OnBoardingViewModelOutputs {
+    implements OnBoardingViewModelInputs, OnBoardingViewModelOutputs {
   // stream controllers
   final StreamController _streamController =
       StreamController<SliderViewObject>();
@@ -64,22 +64,14 @@ class OnBoardingViewModel extends BaseViewModel
 
   // private functions
   List<SliderObject> _getSliderData() => [
-        SliderObject(
-            AppStrings.onBoardingTitle1.tr(),
-            AppStrings.onBoardingSubTitle1.tr(),
-            ImageAssets.onboardingLogo1),
-        SliderObject(
-            AppStrings.onBoardingTitle2.tr(),
-            AppStrings.onBoardingSubTitle2.tr(),
-            ImageAssets.onboardingLogo2),
-        SliderObject(
-            AppStrings.onBoardingTitle3.tr(),
-            AppStrings.onBoardingSubTitle3.tr(),
-            ImageAssets.onboardingLogo3),
-        SliderObject(
-            AppStrings.onBoardingTitle4.tr(),
-            AppStrings.onBoardingSubTitle4.tr(),
-            ImageAssets.onboardingLogo4)
+        SliderObject(AppStrings.onBoardingTitle1.tr(),
+            AppStrings.onBoardingSubTitle1.tr(), ImageAssets.onboardingLogo1),
+        SliderObject(AppStrings.onBoardingTitle2.tr(),
+            AppStrings.onBoardingSubTitle2.tr(), ImageAssets.onboardingLogo2),
+        SliderObject(AppStrings.onBoardingTitle3.tr(),
+            AppStrings.onBoardingSubTitle3.tr(), ImageAssets.onboardingLogo3),
+        SliderObject(AppStrings.onBoardingTitle4.tr(),
+            AppStrings.onBoardingSubTitle4.tr(), ImageAssets.onboardingLogo4)
       ];
 
   _postDataToView() {

@@ -7,7 +7,7 @@ import 'package:complete_advanced_flutter/presentation/common/state_renderer/sta
 import 'package:complete_advanced_flutter/presentation/common/state_renderer/state_renderer.dart';
 
 class ForgotPasswordViewModel extends BaseViewModel
-    with ForgotPasswordViewModelInput, ForgotPasswordViewModelOutput {
+    implements ForgotPasswordViewModelInput, ForgotPasswordViewModelOutput {
   final StreamController _emailStreamController =
       StreamController<String>.broadcast();
   final StreamController _isAllInputValidStreamController =

@@ -9,7 +9,7 @@ import 'package:complete_advanced_flutter/presentation/common/state_renderer/sta
 import 'package:rxdart/rxdart.dart';
 
 class HomeViewModel extends BaseViewModel
-    with HomeViewModelInputs, HomeViewModelOutputs {
+    implements HomeViewModelInputs, HomeViewModelOutputs {
   HomeUseCase _homeUseCase;
 
   final _dataStreamController = BehaviorSubject<HomeViewObject>();

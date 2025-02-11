@@ -8,7 +8,7 @@ import 'package:complete_advanced_flutter/presentation/common/state_renderer/sta
 import 'package:rxdart/rxdart.dart';
 
 class StoreDetailsViewModel extends BaseViewModel
-    with StoreDetailsViewModelInput, StoreDetailsViewModelOutput {
+    implements StoreDetailsViewModelInput, StoreDetailsViewModelOutput {
   final _storeDetailsStreamController = BehaviorSubject<StoreDetails>();
 
   final StoreDetailsUseCase storeDetailsUseCase;
